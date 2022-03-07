@@ -1,0 +1,40 @@
+# Observer Pattern
+Notes and Exercises found in the Observer Pattern section of the book.<br>
+
+
+## Coding to a Concrete Implementation
+
+- Can result in tightly coupled code that makes it difficult to 
+add changes without the need to modify the original class.
+- Results in an increase in the number of code changes required to 
+add functionality in the future.
+
+
+## Observer Pattern
+
+- The ****Observers**** subscribe to a ****Subject****.
+- The **Observers** are notified when the data in the **Subject** changes.
+- **Observers** are notified after certain state changes occur in the **Subject**
+- When an Object's state changes, all **Observers** are notified and updated automatically.
+- **Subject** is able to add and remove **Observers**.
+
+## Loose Coupling
+- All a Subject knows about an Observer is that it implements the Observer interface. 
+- We can add and remove Observers at any time without making changes to the Subject.
+- Changes can be made to either the Subject or Observer and neither needs any additional code changes as
+long as the classes properly implement the Observer/Subject interface properly.
+
+<br>
+<br>
+<br>
+
+---
+### *Exercise: Designing the Weather System Application*
+![temp](images/WeatherAppDiagram.png)
+---
+
+### *Exercise: Is passing data from the sensors directly to the observer a good idea?*
+> This might not be the best way to approach this. Passing data directly defeats the purpose of encapsulation and leads to
+a more tightly coupled system. This also means that the class controlling the data transfer would also have to register 
+and remove observers. This would not follow OOP principles as the the data transfer class would have a wide range of unrelated
+responsibilities.
