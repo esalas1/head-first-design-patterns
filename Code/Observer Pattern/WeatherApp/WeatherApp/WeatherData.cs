@@ -8,19 +8,37 @@ namespace WeatherApp
 {
     public class WeatherData
     {
-        // Instance variable declarations here:
+        private List<WeatherObserver> Observers;
+        private WeatherInfo WeatherInfo= new WeatherInfo();
 
-        public void MeasurementsChanged()
+        public WeatherData()
         {
-            double temp = GetTemperature();
-            double humidity = GetHumidity();
-            double pressure = GetPressure();
+            Observers = new List<WeatherObserver>();
+        }
 
-            currentConditionsDisplay.update();
-            statisticsDisplayUpdate.update();
-            forecastDisplay.update();
+        public void RegisterObserver(WeatherObserver observer)
+        {
+            Observers.Add(observer);
+        }
+        
+        public void RemoveObserver(WeatherObserver observer)
+        {
+            Observers.Remove(observer);
+        }
 
+        public void NotifyObservers()
+        {
+            foreach (WeatherObserver observer in Observers)
+            {
+                observer.Update(WeatherInfo);
+            }
+        }
 
+        public void MeasurementsChanged(double temperature, double humidity, double pressure)
+        {
+            WeatherInfo.Temperature = temperature;
+            WeatherInfo.Humidity = humidity;
+            WeatherInfo.Pressure = pressure;
         }
     }
 }
