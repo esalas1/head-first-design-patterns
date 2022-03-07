@@ -1,0 +1,7 @@
+## Coding to concrete implementation
+
+- Can result in tightly coupled code that makes it difficult to 
+add changes without the need to modify the original class.
+- Results in an increase in the number of code changes required to 
+add functionality in the future.
+- 
