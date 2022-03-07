@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherApp
 {
-    interface IWeatherObserver
+    public interface IWeatherObserver
     {
         public void Update(WeatherInfo weatherDTO);
     }

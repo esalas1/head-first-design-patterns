@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WeatherApp
 {
-    interface IWeatherDisplay
+    public interface IWeatherDisplay
     {
-        public void Display(WeatherInfo weatherInfo);
+        public void Display();
     }
 }

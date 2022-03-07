@@ -8,27 +8,27 @@ namespace WeatherApp
 {
     public class WeatherData
     {
-        private List<WeatherObserver> Observers;
+        private List<IWeatherObserver> Observers;
         private WeatherInfo WeatherInfo= new WeatherInfo();
 
         public WeatherData()
         {
-            Observers = new List<WeatherObserver>();
+            Observers = new List<IWeatherObserver>();
         }
 
-        public void RegisterObserver(WeatherObserver observer)
+        public void RegisterObserver(IWeatherObserver observer)
         {
             Observers.Add(observer);
         }
         
-        public void RemoveObserver(WeatherObserver observer)
+        public void RemoveObserver(IWeatherObserver observer)
         {
             Observers.Remove(observer);
         }
 
         public void NotifyObservers()
         {
-            foreach (WeatherObserver observer in Observers)
+            foreach (IWeatherObserver observer in Observers)
             {
                 observer.Update(WeatherInfo);
             }
