@@ -1,0 +1,33 @@
+# The Decorator Pattern
+
+Notes on the Decorator Pattern.
+
+---
+*Exercise: Which design principles were violated by the initial coffee class implementation?*
+
+1. The first implementation does not encapsulate the data that varies. Each subclass 
+implements its own cost() method and therefore must be coded for each variation of coffee mixture.
+The coffee's cost can be coded to an interface to avoid this issue.
+2. The cost is coded to a concrete class instead of an interface that other classes can implement.
+---
+
+*Exercise: Implement the cost method for coffee beverages.*
+![code snippet](images/CoffeeCostExercise.png)
+
+---
+*Exercise: What requirements or other factors might change that will 
+impact the design?*
+
+1. New, non-coffee beverages that are added to the menu
+may inherit irrelevant ingredient and cost properties.
+2. New condiments will need to be added to the Beverage base 
+class.
+3. The price of Multiple servings of the same condiments cannot
+be calculated correctly here. 
+---
+
+## Inheritance can be Achieved through Composition at Runtime
+- Adding new code without altering existing code can lead to 
+less bugs especially if the existing code has already been tested
+and verified to work correctly. 
+- Classes should be **closed to change, but open to extension.**
