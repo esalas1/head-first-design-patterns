@@ -5,3 +5,15 @@ add changes without the need to modify the original class.
 - Results in an increase in the number of code changes required to 
 add functionality in the future.
 - Instantiating a concrete class means programming to an implementation.
+- By coding to an interface, you can insulate yourself from changes that might
+happen in a system. 
+- Closed for modification but open to extension. 
+
+## Dependency Inversion
+Depend on abstractions and not on concrete classes.
+This applies to both high level and low level modules.
+
+### Principles to consider
+1. No variables should hold a references to a concrete class.
+2. No class should derive from a concrete class.
+3. No method should override an implemented method of any of its base classes.

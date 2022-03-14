@@ -12,5 +12,15 @@ these objects. Encapsulate the process that creates these classes.
 ---
 
 ## Factory Method
-- handles object creation and encapsulates it in a subclass.
+- Handles object creation and encapsulates it in a subclass.
 - The superclass and client do not know what kind of object is being created in the subclass.
+- The Factory Pattern method encapsulates object creation by 
+lettings subclasses decide what objects to create.
+
+## Factory Pattern Method in our Pizza Store
+- In our case, the factory method is CreatePizza();
+- This abstract method is defined by the concrete subclasses and define a specific object
+of their choice.
+- We can see an example of parallel heirarchies if we study the structure of the PizzaStore and Pizza classes.
+- In our case, both the PiizaStore and Piiza classes are abastract classes that are extended by
+the concrete subclasses which manage the desired implementation.
