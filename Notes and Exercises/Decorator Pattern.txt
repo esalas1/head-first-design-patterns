@@ -31,3 +31,12 @@ be calculated correctly here.
 less bugs especially if the existing code has already been tested
 and verified to work correctly. 
 - Classes should be **closed to change, but open to extension.**
+
+## Decorators
+1. Decorator can add new behavior to other objects.
+2. Decorating objects can offer an effective alternative to subclassing
+when extra functionality is needed.
+3. The Decorator interface implements the same class as the 
+concrete class that they will decorate.
+
+## Inheritance over Composition
