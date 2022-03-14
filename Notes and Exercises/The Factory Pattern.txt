@@ -1,0 +1,16 @@
+# The Factory Pattern
+- Factories handle the details of object creation.
+
+
+---
+### *Exercise: How might you take all parts of your application that instantiate concrete classes and separate or encapculate them from the rest of the applcation?*
+- Move this process over to a class that takes care of instantiating 
+these objects. Encapsulate the process that creates these classes. 
+---
+### *Exercise: How can we use object composition to swap in and out of implementations in our PizzaStore?*
+- We can add variations of the original Pizza creator with specific differences that fulfill the user's needs.
+---
+
+## Factory Method
+- handles object creation and encapsulates it in a subclass.
+- The superclass and client do not know what kind of object is being created in the subclass.
