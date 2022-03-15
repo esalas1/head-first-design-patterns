@@ -6,9 +6,20 @@ namespace PizzaApp
     {
         static void Main(string[] args)
         {
-            PizzaStore pizzaStore = new ChicagoPizzaStore();
-            Pizza ourPizza = pizzaStore.OrderPizza("PineApples");
+            PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+            chicagoPizzaStore.OrderPizza();
+            Console.WriteLine();
+
+            PizzaStore californiaPizzaStore = new CaliforniaPizzaStore();
+            californiaPizzaStore.OrderPizza();
+            Console.WriteLine();
+
+            PizzaStore newYorkPizzaStore = new NewYorkPizzaStore();
+            newYorkPizzaStore.OrderPizza();
+            Console.WriteLine();
+
             Console.ReadLine();
+
         }
 
     }

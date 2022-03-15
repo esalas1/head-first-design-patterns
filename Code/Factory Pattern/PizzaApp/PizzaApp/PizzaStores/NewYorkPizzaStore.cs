@@ -8,9 +8,10 @@ namespace PizzaApp
 {
     public class NewYorkPizzaStore : PizzaStore
     {
-        public override Pizza CreatePizza(string extraToppings)
+        public override Pizza CreatePizza()
         {
-            Pizza nyPizza = new NewYorkPizza(extraToppings);
+            PizzaIngredientFactory _ingredientFactory = new NewYorkIngredientsFactory();
+            Pizza nyPizza = new NewYorkPizza(_ingredientFactory);
             
             return nyPizza;
         }

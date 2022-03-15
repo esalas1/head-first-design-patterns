@@ -8,13 +8,18 @@ namespace PizzaApp
 {
     public class NewYorkPizza : Pizza
     {
-        public NewYorkPizza(string extraToppings)
+        PizzaIngredientFactory _ingredientFactory;
+        public NewYorkPizza(PizzaIngredientFactory ingredientFactory)
         {
-            name = "New York Styyle Pizza";
-            dough = "Thin Crust";
-            sauce = "Marinara Sauce";
+            this._ingredientFactory = ingredientFactory;
+        }
 
-            toppings.Add(extraToppings);
+        public override void Prepare()
+        {
+            Console.WriteLine("Preparing New York Pizza");
+            Dough = _ingredientFactory.CreateDough();
+            Sauce = _ingredientFactory.CreateSauce();
+            Cheese = _ingredientFactory.CreateCheese();
         }
     }
 }

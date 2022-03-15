@@ -24,3 +24,7 @@ of their choice.
 - We can see an example of parallel heirarchies if we study the structure of the PizzaStore and Pizza classes.
 - In our case, both the PiizaStore and Piiza classes are abastract classes that are extended by
 the concrete subclasses which manage the desired implementation.
+
+## Abstract Factory Pattern
+- provides an interface for creating a family of related objects but does
+not specify the concrete classes. 
