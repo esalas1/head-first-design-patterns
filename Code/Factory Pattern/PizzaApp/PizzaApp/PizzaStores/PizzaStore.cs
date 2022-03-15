@@ -8,10 +8,10 @@ namespace PizzaApp
 {
     public abstract class PizzaStore
     {
-        public Pizza OrderPizza(string extraToppings)
+        public Pizza OrderPizza()
         {
             Pizza pizza;
-            pizza = CreatePizza(extraToppings);
+            pizza = CreatePizza();
 
             pizza.Prepare();
             pizza.Bake();
@@ -21,6 +21,6 @@ namespace PizzaApp
             return pizza;
         }
 
-        public abstract Pizza CreatePizza(string type);
+        public abstract Pizza CreatePizza();
     }
 }

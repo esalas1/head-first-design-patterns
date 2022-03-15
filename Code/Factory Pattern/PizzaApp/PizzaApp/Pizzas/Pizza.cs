@@ -8,29 +8,25 @@ namespace PizzaApp
 {
     public abstract class Pizza
     {
-        public string name;
-        public string dough;
-        public string sauce;
-        public List<string?> toppings = new List<string>();
+        public Dough Dough;
+        public Sauce Sauce;
+        public Cheese Cheese;
 
-        public void Prepare()
-        {
-            Console.WriteLine("Preparing:");
-        }
+        public abstract void Prepare();
 
         public void Bake()
         {
-            Console.WriteLine("Baked");
+            Console.WriteLine("Pizza is being baked.");
         }
 
         public void Cut()
         {
-            Console.WriteLine("Cut");
+            Console.WriteLine("Pizza is being cut.");
         }
 
         public void Boxed()
         {
-            Console.WriteLine("Boxed");
+            Console.WriteLine("Pizza is being boxed.");
         }
     }
 }
