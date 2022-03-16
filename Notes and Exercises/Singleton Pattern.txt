@@ -6,4 +6,5 @@ only one thread at a time access the static GetInstance() method.
 - With double checked locking, we first see if the instance is created and then we 
 synchronize if it is.
 - Eager instantiation can help to always pass the instance when asked, since the singleton 
-is instantiated when the class is created.
+is instantiated when the class is created. This prevents issues with running
+multiple threads that check if the singleton is null or not.
