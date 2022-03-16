@@ -1,0 +1,9 @@
+## The Singleton Pattern
+- Ensures a class only has one instance and provides a global point of access to the one instance.
+- Lazy instantiation - we only create an instance of something when we need it. 
+- Making the GetInstance() method "synchronized" is important because it lets 
+only one thread at a time access the static GetInstance() method.
+- With double checked locking, we first see if the instance is created and then we 
+synchronize if it is.
+- Eager instantiation can help to always pass the instance when asked, since the singleton 
+is instantiated when the class is created.
