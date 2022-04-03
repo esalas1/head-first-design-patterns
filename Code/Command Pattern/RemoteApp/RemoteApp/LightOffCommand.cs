@@ -8,16 +8,21 @@ namespace RemoteApp
 {
     public class LightOffCommand : Command
     {
-        Light light;
+        Light _light;
 
         public LightOffCommand(Light light)
         {
-            this.light = light;
+            _light = light;
         }
 
         public void Execute()
         {
-            light.Off();
+            _light.Off();
+        }
+
+        public void Undo()
+        {
+            _light.On();
         }
     }
 }
