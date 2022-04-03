@@ -27,4 +27,5 @@ the concrete subclasses which manage the desired implementation.
 
 ## Abstract Factory Pattern
 - provides an interface for creating a family of related objects but does
-not specify the concrete classes. 
+not specify the concrete classes.
+- 

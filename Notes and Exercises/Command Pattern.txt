@@ -1,0 +1,11 @@
+# The Command Pattern
+
+The command pattern encapsulates requests as an object. 
+
+### *Exercise: How does the deisign of the Command Pattern support the decoupling of the invoker of a request and the receiver of the request*
+The invoker speaks directly to the concrete command object and is not in the same scope as
+any of the receivers. The invoker knows that if it issues a command, the request will be received
+and the correct action will be performed. The request is encapsulated as a part of the 
+command's structure. Each command performs its own action independently of everything else. 
+This leads to a decoupled system and allows for a modular design where the user
+can easily add or remove commands without consequently modifying the entire system.
