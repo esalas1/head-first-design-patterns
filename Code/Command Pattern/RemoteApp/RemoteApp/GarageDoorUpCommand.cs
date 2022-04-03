@@ -8,6 +8,7 @@ namespace RemoteApp
 {
     public class GarageDoorUpCommand : Command
     {
+
         public void Execute();
     }
 }
