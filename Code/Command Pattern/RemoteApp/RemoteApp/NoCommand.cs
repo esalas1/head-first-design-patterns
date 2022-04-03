@@ -6,23 +6,16 @@ using System.Threading.Tasks;
 
 namespace RemoteApp
 {
-    public class LightOnCommand : Command
+    public class NoCommand : Command
     {
-        Light _light;
-
-        public LightOnCommand(Light light)
-        {
-            _light = light;
-        }
-
         public void Execute()
         {
-            _light.On();
+            Console.WriteLine("Execute does nothing.");
         }
 
         public void Undo()
         {
-            _light.Off();
+            Console.WriteLine("Undo does nothing.");
         }
     }
 }

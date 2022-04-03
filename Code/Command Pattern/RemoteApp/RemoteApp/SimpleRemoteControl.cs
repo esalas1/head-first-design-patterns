@@ -8,13 +8,13 @@ namespace RemoteApp
 {
     public class SimpleRemoteControl
     {
-        Command slot;
+        Command? slot;
 
         public SimpleRemoteControl() { }
 
         public void SetCommand(Command command)
         {
-            slot = command;
+            this.slot = command;
         }
 
         public void ButtonWasPressed()

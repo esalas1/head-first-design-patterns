@@ -6,12 +6,14 @@ namespace RemoteApp
     {
         static void Main(string[] args)
         { 
-            SimpleRemoteControl remote = new SimpleRemoteControl();
+            RemoteControlWithUndo remote = new RemoteControlWithUndo();
             Light light = new Light();
             LightOnCommand lightOn = new LightOnCommand(light);
+            LightOffCommand lightOff = new LightOffCommand(light);
 
-            remote.SetCommand(lightOn);
-            remote.ButtonWasPressed();
+            remote.SetCommand(0,lightOn, lightOff);
+            remote.OnButtonWasPushed(0);
+            remote.UndoButtonWasPushed();
         }
     }
 }

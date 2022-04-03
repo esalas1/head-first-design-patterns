@@ -8,14 +8,6 @@ namespace RemoteApp
 {
     public class GarageDoor
     {
-        Light light;
-
-        public GarageDoor(Light light)
-        {
-            this.light = light;
-        }
-
-
         public void Up()
         {
             Console.WriteLine("Garage door opened.");
@@ -29,16 +21,6 @@ namespace RemoteApp
         public void Stop()
         {
             Console.WriteLine("Garage door was stopped.");
-        }
-
-        public void LightOn()
-        {
-            Console.WriteLine("Light was turned on.");
-        }
-
-        public void LightOff()
-        {
-            Console.WriteLine("Light was turned off.");
         }
     }
 }
