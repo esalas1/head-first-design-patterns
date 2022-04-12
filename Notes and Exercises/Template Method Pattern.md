@@ -20,3 +20,10 @@ can result in dependency rot, where the system is intertwined in a
 manner that may not be clear or intuitive. 
 - Dependency rot can make it difficult to clearly
 see how the system is designed.
+
+## Hooks
+Hooks allow subclasses to take the base classes' method and modify 
+them bases on what is needed. 
+
+Subclasses can utilize hooks to take advantage of a template's funtionality
+while tailoring some if it's methods to fullfill other responsibilities. 
