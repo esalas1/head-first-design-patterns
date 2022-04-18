@@ -1,0 +1,22 @@
+# Iterator and Composite Patterns
+
+
+## Iterator Pattern
+
+Relies on the Iterator Interface. 
+Relies on two methods: 
+- HasNext() - tells us if there is another element in the collection 
+to iterator through.
+- Next() - returns the next object in the collection.
+- Aggregates are also called collections. Refers to group of objects. 
+- used to access objects sequentially without exposing the underlying 
+implementation (Array, List, etc.).
+- Iterators apply no Ordering.
+
+**Classes should have only one reason to change**
+- If we add multiple responsibilities to classes
+anytime the responsibilities change, the class needs to change.
+Classes with multiple responsibilities are therefore more 
+likely to change, making the code less maintainable. 
+- High cohesion is the result of following this principle. 
+
