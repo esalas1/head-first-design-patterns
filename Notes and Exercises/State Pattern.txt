@@ -1,0 +1,7 @@
+# The State Pattern
+
+## State Machines 101 and How to Implement Them
+1. Identify the necessary states.
+2. Create an instance variable to hold the current state value
+and define values for each of the states. 
+3. Identify all the actions that happen in the system.
