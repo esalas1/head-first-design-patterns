@@ -19,4 +19,12 @@ anytime the responsibilities change, the class needs to change.
 Classes with multiple responsibilities are therefore more 
 likely to change, making the code less maintainable. 
 - High cohesion is the result of following this principle. 
+- "Framework" refers to a set of classs and interfaces.
 
+
+## Composite Pattern
+- Allows us to form a tree-like heirarchy for object and composition 
+of objects for simplified traversal.
+- The Composite Pattern allows us to treat individual objects and compositions
+uniformly. 
+- We have common methods we can call on Composites and Leaves. 
