@@ -20,7 +20,6 @@ Classes with multiple responsibilities are therefore more
 likely to change, making the code less maintainable. 
 - High cohesion is the result of following this principle. 
 - "Framework" refers to a set of classs and interfaces.
--Testing push 
 
 
 ## Composite Pattern
